@@ -1,0 +1,32 @@
+<section class="p-3">
+    <div class="container">
+        <div class="row g-4">
+            @for (product of allProducts; track product.id) {
+                <div class="col-md-3 d-flex flex-column justify-content-between">
+                    <div class="item rounded-2 p-2 h-100">
+                        <div class="title border-bottom">
+                            <h2 class="h5 text-center">{{product.title.split(" ", 3).join("")}}</h2>
+                        </div>
+                        <div class="body border-bottom">
+                            <div class="card-img p-3">
+                                <img [src]="product.image" [alt]="product.title" class="w-100">
+                            </div>
+                            <div class="card-text pt-2 border-top text-center">
+                                <p>{{product.category}}</p>
+                            </div>
+                        </div>
+                        <div class="footer d-flex justify-content-between align-items-center">
+                            <div class="price">
+                                <p>{{product.price}} EGP</p>
+                            </div>
+                            <div class="rating">
+                                <span><i class="fas fa-star text-warning"></i></span>
+                                <span>{{product.rating.rate}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

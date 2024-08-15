@@ -1,0 +1,28 @@
+section
+{
+    background-color: #07263a;
+}
+
+.card-card
+{
+    border: 3px solid #a1a1aa;
+    background-color: #eee;
+}
+
+img
+{
+    height: 300px;
+}
+
+.item
+{
+    border: 2px solid gray;
+    background-color: #eee;
+    cursor: pointer;
+    transition: scale 0.3s;
+}
+
+.item:hover
+{
+    scale: 105%;
+}
